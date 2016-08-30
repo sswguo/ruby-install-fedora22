@@ -1,6 +1,28 @@
 # ruby-install-fedora22
 
-## Issue #1:  
+## Issue #1:
+When exec the following cmd:
+gem pristine --all
+
+```
+Fetching: fog-brightbox-0.0.2.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /usr/share/gems directory.
+```
+
+```
+Cached gem for json-1.8.3 not found, attempting to fetch...
+Fetching: json-1.8.3.gem (100%)
+Building native extensions.  This could take a while...
+ERROR:  While executing gem ... (Errno::EACCES)
+    Permission denied @ rb_sysopen - /usr/lib64/gems/ruby/json-1.8.3/gem_make.out
+```
+
+## Solution:
+1:  gem install json -v 1.8.3 
+
+## Issue #2:  
+```
 [~/rbworkspace/blog] $ gem install ruby-libvirt -v 0.4.0
 Fetching: ruby-libvirt-0.4.0.gem (100%)
 Building native extensions.  This could take a while...
@@ -39,6 +61,7 @@ extconf failed, exit code 1
 
 Gem files will remain installed in /home/wguo/.gem/ruby/gems/ruby-libvirt-0.4.0 for inspection.
 Results logged to /home/wguo/.gem/ruby/extensions/x86_64-linux/ruby-libvirt-0.4.0/gem_make.out
+```
 
 ## Solution:
 sudo dnf install libvirt-devel
