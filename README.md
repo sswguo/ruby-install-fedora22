@@ -129,12 +129,30 @@ RubyGems Environment:
      - /home/wguo/gowork/bin
 ```
 
+## Test Rails
 
-## Ref:
+- Create new app blog
+```
+[~/rbworkspace] $  rails new blog
+```
+- Start rails server
+```
+[~/rbworkspace/blog] $ rails server
+Could not find rake-11.2.2 in any of the sources
+Run `bundle install` to install missing gems.
+```
+It will show the missing gems error, and then run "bundle install":
+```
+[~/rbworkspace/blog] $ bundle install
+```
+Then start rails server again. It should works!
+
+
+### Ref:
 http://www.itzgeek.com/how-tos/linux/centos-how-tos/install-ruby-on-rails-on-ubuntu-centos-fedora-using-rvm.html
 http://guides.ruby-china.org/getting_started.html
 
-## Issue #1:
+### Issue #1:
 When exec the following cmd:
 gem pristine --all
 
@@ -152,10 +170,10 @@ ERROR:  While executing gem ... (Errno::EACCES)
     Permission denied @ rb_sysopen - /usr/lib64/gems/ruby/json-1.8.3/gem_make.out
 ```
 
-## Solution:
+### Solution:
 1:  gem install json -v 1.8.3 
 
-## Issue #2:  
+### Issue #2:  
 ```
 [~/rbworkspace/blog] $ gem install ruby-libvirt -v 0.4.0
 Fetching: ruby-libvirt-0.4.0.gem (100%)
@@ -197,5 +215,5 @@ Gem files will remain installed in /home/wguo/.gem/ruby/gems/ruby-libvirt-0.4.0 
 Results logged to /home/wguo/.gem/ruby/extensions/x86_64-linux/ruby-libvirt-0.4.0/gem_make.out
 ```
 
-## Solution:
+### Solution:
 sudo dnf install libvirt-devel
