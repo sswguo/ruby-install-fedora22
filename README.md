@@ -131,6 +131,7 @@ RubyGems Environment:
 
 
 ## Ref:
+http://www.itzgeek.com/how-tos/linux/centos-how-tos/install-ruby-on-rails-on-ubuntu-centos-fedora-using-rvm.html
 http://guides.ruby-china.org/getting_started.html
 
 ## Issue #1:
