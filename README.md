@@ -1,5 +1,8 @@
 # ruby-install-fedora22
 
+## Ref:
+http://guides.ruby-china.org/getting_started.html
+
 ## Issue #1:
 When exec the following cmd:
 gem pristine --all
