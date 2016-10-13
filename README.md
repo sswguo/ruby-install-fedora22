@@ -1,5 +1,8 @@
 # ruby-install-fedora22
 
+## Install ruby via ansible
+[Ruby Installer Playbook](https://github.com/WellsG/centos7-ansible/blob/master/ansible-sample/playbooks/rvm.yml)
+
 ## Install RVM (Ruby Version Manager)
 ```
 [~] $ gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
